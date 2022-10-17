@@ -1,7 +1,7 @@
 let latitude, longitude, destination;
 
 $(document).ready(function () {
-    alert("Please allow the device to know your location!")
+    alert("¡Por favor, permite que el dispositivo conozca tu ubicación!")
     initGeolocation();
 })
 
@@ -16,7 +16,7 @@ function initGeolocation() {
         navigator.geolocation.getCurrentPosition(success);
     }
     else {
-        alert("Sorry, your browser does not support geolocation services.");
+        alert("Lo sentimos, tu navegador no es compatible con los servicios de geolocalización.");
     }
 }
 
@@ -24,7 +24,7 @@ function success(position) {
     longitude = position.coords.longitude;
     latitude = position.coords.latitude
 
-    // Initializing Mapbox
+    // Inicializar Mapbox
     mapboxgl.accessToken = 'pk.eyJ1IjoiYXBvb3J2ZWxvdXMiLCJhIjoiY2ttZnlyMDgzMzlwNTJ4a240cmEzcG0xNyJ9.-nSyL0Gy2nifDibXJg4fTA';
 
     var map = new mapboxgl.Map({
